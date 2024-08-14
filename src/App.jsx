@@ -4,6 +4,7 @@ import Navbar from './components/navbar';
 import About from './components/About';
 import Projects from './components/Projects';
 import Play from './components/Play';
+import Rescue from './components/Rescue';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/play" element={<Play />} />
+          <Route path="/projects/rescue" element={<Rescue />} />
         </Routes>
       </div>
     </Router>
