@@ -4,6 +4,8 @@ import Navbar from './components/navbar';
 import About from './components/About';
 import Projects from './components/Projects';
 import Play from './components/Play';
+
+// Import individual projects
 import Rescue from './components/Rescue';
 
 function App() {
