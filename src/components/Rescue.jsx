@@ -1,15 +1,15 @@
 import React from 'react';
 import './IndividualProject.css'
-import rescue_img from '../assets/project_images/rescue_img.jpg'
-import rescue_personas from '../assets/project_images/RESCUE_Personas.jpg'
-import rescue_userjourney from '../assets/project_images/rescue_userjourney.jpg'
-import rescue_wireframes from '../assets/project_images/rescue_wireframes.png'
-import rescue_digi_wireframes from '../assets/project_images/RESCUE_lofi_wireframes.jpg'
-import rescue_usabilitystudy from '../assets/project_images/rescue_post-its.png'
-import donation_gif from '../assets/project_images/hifi_proto_donation.gif'
-import update_gif from '../assets/project_images/viewupdates.gif'
-import volunteer_gif from '../assets/project_images/volunteer.gif'
-import message_gif from '../assets/project_images/rescue_message.gif'
+import rescue_img from '../assets/project_images/rescue/rescue_img.jpg'
+import rescue_personas from '../assets/project_images/rescue/RESCUE_Personas.jpg'
+import rescue_userjourney from '../assets/project_images/rescue/rescue_userjourney.jpg'
+import rescue_wireframes from '../assets/project_images/rescue/rescue_wireframes.png'
+import rescue_digi_wireframes from '../assets/project_images/rescue/RESCUE_lofi_wireframes.jpg'
+import rescue_usabilitystudy from '../assets/project_images/rescue/rescue_post-its.png'
+import donation_gif from '../assets/project_images/rescue/hifi_proto_donation.gif'
+import update_gif from '../assets/project_images/rescue/viewupdates.gif'
+import volunteer_gif from '../assets/project_images/rescue/volunteer.gif'
+import message_gif from '../assets/project_images/rescue/rescue_message.gif'
 
 let project = {
     title: "Rescue - Stay connected with your local shelters",
