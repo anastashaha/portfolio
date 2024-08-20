@@ -82,6 +82,24 @@
     font-size: 20px;
 }
 
+.half-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.left-container {
+    grid-column: 1;
+}
+
+.right-container {
+    grid-column: 2;
+}
+
+.right-container > div:first-child {
+    margin-bottom: 20px; /* Adjust the space as needed */
+}
+
 @media (max-width: 768px) {
     .project-container {
         width: 100%;
@@ -93,5 +111,9 @@
 
     .title {
         text-align: left;
+    }
+
+    .half-grid {
+        grid-template-columns: 1fr;
     }
 }
