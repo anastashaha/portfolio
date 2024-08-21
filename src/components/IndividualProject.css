@@ -24,9 +24,15 @@
 }
 
 .project-grid ul ul {
+    list-style-type: circle;
     margin-left: 50px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.project-grid ul ul ul {
+    list-style-type: square; /* Nested level 2 bullet style */
+    margin-left: 50px; 
 }
 
 .project-grid li {

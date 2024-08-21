@@ -10,6 +10,7 @@ import Rescue from './components/Rescue';
 import Kodify from './components/Kodify';
 import Marceline from './components/Marceline';
 import MentalHealthML from './components/MentalHealthML';
+import Seeds from './components/Seeds'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/projects/kodify" element={<Kodify />} />
           <Route path="/projects/marceline" element={<Marceline />} /> 
           <Route path="/projects/mentalhealthintech" element={<MentalHealthML />} />
+          <Route path="/projects/seeds" element={<Seeds />} />
         </Routes>
       </div>
     </Router>
