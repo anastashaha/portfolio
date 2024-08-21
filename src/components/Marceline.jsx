@@ -42,6 +42,11 @@ let project = {
     ideation5: "These wires were then connected to the corresponding input pins on the Arduino Due. This setup allowed for the detection of touch interactions on the canvas, facilitating the conversion of these interactions into audio outputs.",
     implementation: "Finally, I refined my testing code and finished programming both the Arduino code and Python script to cover all 18 touch points and notes. I noticed that the capacitive sensors worked much slower with all 18 touch points, and upon testing, discovered that it could maintain its sensing speed with at most 4 touch points.",
     reflection: "I learned so many new things in this process, and the addicting feeling of figuring things out cannot be put into words. Connecting my 3 biggest interests was deeply satisfying and something I cannot wait to do more of, now that I’ve dipped my feet into the intersection of art and technology.",
+    signal_test_limitations: "I was on the right track in testing out multiple touch sensors, but I should have tested with more than two signals when my original goal was to have 18 simultaneous signals. This taught me the importance of thorough and scaled testing, especially when working with complex interactive systems.",
+    code_optimization: " I wrote a lot of repetitive code to maintain clarity for each note's functionality. However, I see a significant opportunity to refactor and streamline the code for efficiency and maintainability.",
+    enhancing: "My immediate goal is to experiment with ways to increase the capacity for simultaneous touch signals, as I would like to get all 18 notes to work for me to be able to play the entire song of “Everything Stays”.",
+    hardware: "As this was my first hardware project, I have a long way to go in understanding the intricacies of circuit design. I hope to develop a better understanding of this aspect so that I can be equipped to effectively troubleshoot and explore more interactive projects.",
+    wireless: "If I am able to get all 18 sensors working, I would like to take this one step further and incorporate a wireless battery and speaker to the back of the canvas that is connected to the hardware. This would require a much deeper understanding of hardware, but my ideal result would be to hang the painting up and have it be interactive without needing it to be connected to my computer."
 }
 
 function Marceline() {
@@ -78,7 +83,7 @@ function Marceline() {
                 <div className="grid-item content">The result of this goal was a painting that I turned into an instrument.</div>
             </div>
 
-            {/* Learning & Experimentation */}
+            {/* Learning & Experimentation 1 */}
             <div className="project-grid">
                 <div className="grid-item title">Learning & Experimentation</div>
                 <div className="grid-item content">{project.learning}</div>
@@ -117,8 +122,109 @@ function Marceline() {
                     <div>{project.serial_monitor_test}</div>
                     <div>{project.serial_monitor_test2}</div>
                 </div>
-        
             </div>
+
+            {/* Learning & Experimentation 2 */}
+            <div className="project-grid">
+                <div className="grid-item title">Learning & Experimentation (cont.)</div>
+                <div className="grid-item content">{project.learning2}</div>
+                <div className="grid-item content">On the software side, I programmed a Python script utilizing the <code>serial</code> and <code>pygame</code> libraries.</div>
+            </div>
+
+            <div className="half-grid">
+                <div className="left-container"><video src={sound_test} controls alt="Video of Python code responding to touch sensor">Your browser does not support the video tag.</video></div>
+                <div className="right-container">
+                    <div>{project.sound_test1}</div>
+                    <div>{project.sound_test2}</div>
+                </div>
+                <div className="left-container"><video src={multiple_outputs} controls alt="Video of Python code responding to multiple touch sensors">Your browser does not support the video tag.</video></div>
+                <div className="right-container"><div>{project.sound_test3}</div></div>
+            </div>
+
+            {/* Ideation & Design 1 */}
+            <div className="project-grid">
+                <div className="grid-item title">Ideation & Design</div>
+                <div className="grid-item content">{project.ideation}</div>
+            </div>
+
+            <div className="half-grid">
+                <div className="left-container"><img src={sketch} alt="First sketch of painting layout"/></div>
+                <div className="right-container">{project.rough_sketch}</div>
+                <div className="left-container">{project.refined_sketch}</div>
+                <div className="right-container"><img src={refined_sketch} alt="Refined sketch of painting layout"/></div>
+            </div>
+
+            <div>I then translated these concepts onto the canvas, where I used electric paint for the ends of each section of hair, and regular acrylic paint for the rest of the painting.</div>
+
+            <div className="half-grid">
+                <div className="left-container"><img src={first_draft} alt="First sketch on canvas"/></div>
+                <div className="right-container"><img src={second_draft} alt="Second draft with electric paint on canvas"/></div>
+                <div className="left-container"><img src={painting_gif} alt="Gif of Anastasha painting a portion of the canvas"/></div>
+                <div className="right-container"><img src={finished_painting} alt="Photo of the finished painting of Marceline on canvas"/></div>
+            </div>
+
+            {/* Ideation & Design 2 */}
+            <div className="project-grid">
+                <div className="grid-item title">Ideation & Design (cont.)</div>
+                <div className="grid-item content">For the circuit design of this project, I chose to use the <strong>Arduino Due</strong> for its capability to handle multiple inputs, necessary for the 18 touch points on the painting for which I needed 18 sensor pins and 18 receiver pins. Each touch point was connected to the Arduino using copper tape attached to the electric paint areas on the canvas edges.</div>
+                <div className="grid-item content">{project.ideation3}</div>
+                <div className="grid-item content">{project.ideation4}</div>
+                <div className="grid-item content">
+                    <ul>
+                        <li><u><a href="https://inst.eecs.berkeley.edu/~ee192/sp11/documents/soldering%20tips.pdf">Soldering Tips</a></u></li>
+                        <li><u><a href="https://inst.eecs.berkeley.edu/~ee16a/fa22/lab/touch2.pdf">Soldering Do's and Dont's</a></u></li>
+                    </ul>
+                </div>
+                <div className="grid-item content">{project.ideation5}</div>
+            </div>
+
+            <div className="half-grid">
+                <div className="left-container"><img src={wiring_gif} alt="Gif of Anastasha wiring the circuit"/></div>
+                <div className="right-container"><img src={hammering_gif} alt="Gif of Anastasha screwing in a bolt for the wooden planks intended to hold the circuit board"/></div>
+                <div className="left-container"><img src={soldering1} alt="Gif of Anastasha soldering"/></div>
+                <div className="right-container"><img src={soldering2} alt="Gif of Anastasha soldering"/></div>
+                <div className="center-photo"><img src={final_circuit} alt="Picture of Anastasha holding up the completed circuit board on the back of the painting"/></div>            
+            </div>
+
+            {/* Implementation */}
+            <div className="project-grid">
+                <div className="grid-item title">Implementation</div>
+                <div className="grid-item content">{project.implementation}</div>
+            </div>
+
+            <div className="half-grid"><div className="center-photo"><img src={coding_gif} alt="Gif of Anastasha coding"/></div></div>
+            <div className="project-image"><img src={code_screenshot} alt="Screenshot of Arduino and Python code"/></div>
+
+            {/* Final Product */}
+            <div className="half-grid">
+                <div className="grid-item title">Final Product</div>
+                <div className="grid-item content"><video src={final_video} controls alt="Video of completed painting responding to touch sensor">Your browser does not support the video tag.</video></div>
+            </div>
+
+            {/* Reflections */}
+            <div className="project-grid">
+                <div className="grid-item title">Thoughts / Learnings</div>
+                <div className="grid-item content">{project.reflection}</div>
+                <div className="grid-item content">I would like to sunshine the following mistakes:</div>
+                <div className="grid-item content">
+                    <ol>
+                        <li><strong>Signal testing limitations:</strong> {project.signal_test_limitations}</li>
+                        <li><strong>Code optimization:</strong> {project.code_optimization}</li>
+                    </ol>
+                </div>
+                <div className="grid-item content">I intend to continue with this project, and here are my next steps:</div>
+                <div className="grid-item content">
+                    <ol>
+                        <li><strong>Enhancing touch signal capability</strong> {project.enhancing}</li>
+                        <li><strong>Establishing a better understanding of hardware:</strong> {project.hardware}</li>
+                        <li><strong>Wireless speaker incorporation:</strong> {project.wireless}</li>
+                    </ol>
+                </div>
+            </div>
+
+            
+
+
 
 
 

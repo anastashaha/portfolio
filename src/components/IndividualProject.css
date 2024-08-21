@@ -11,6 +11,12 @@
     grid-template-columns: 1.5fr 3fr;
 }
 
+.project-grid ol {
+    list-style-type: decimal;
+    /* margin-left: 20px; 
+    padding-left: 20px; */
+}
+
 .project-grid ul {
     list-style-type: disc; /* Ensures bullet points are discs */
     margin-left: 20px;    /* Adds margin to show bullets inside the container */
@@ -82,6 +88,13 @@
     font-size: 20px;
 }
 
+.center-photo {
+    grid-column: 1 / span 2;
+    width: 50%; 
+    max-width: 100%; 
+    justify-self: center;
+}
+
 .half-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -94,6 +107,12 @@
 
 .right-container {
     grid-column: 2;
+}
+
+.left-container img, .right-container img {
+    height: 100%; 
+    width: auto; 
+    object-fit: cover;
 }
 
 .right-container > div:first-child {
