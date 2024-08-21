@@ -18,9 +18,9 @@
 }
 
 .project-grid ul {
-    list-style-type: disc; /* Ensures bullet points are discs */
-    margin-left: 20px;    /* Adds margin to show bullets inside the container */
-    padding-left: 0;      /* Adjust padding as needed */
+    list-style-type: disc; 
+    margin-left: 20px;    
+    padding-left: 0;
 }
 
 .project-grid ul ul {
@@ -51,6 +51,11 @@
     margin-top: 10px;
 }
 
+.centered-text {
+    grid-column: 2;
+    text-align: center;
+}
+
 .title {
     grid-column: 1;
     font-weight: bold;
@@ -61,6 +66,34 @@
 .content {
     grid-column: 2;
     text-align: left;
+}
+
+.content img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.content-confusion-matrices {
+    grid-column: 2;
+    width: 60%;
+    align-items: center;
+}
+
+.key-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.key-section img {
+    width: 150px;
+    height: auto;
+}
+
+.key-text {
+    font-weight: bold;
+    margin-right: 10px;
 }
 
 .gif {
@@ -109,6 +142,12 @@
     grid-column: 2;
 }
 
+.right-container li {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
 .left-container img, .right-container img {
     height: 100%; 
     width: auto; 
@@ -116,7 +155,7 @@
 }
 
 .right-container > div:first-child {
-    margin-bottom: 20px; /* Adjust the space as needed */
+    margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
@@ -128,11 +167,24 @@
         grid-template-columns: 1fr; /* Stack columns on smaller screens */
     }
 
-    .title {
+    .title, .content {
+        grid-column: 1;
         text-align: left;
     }
 
     .half-grid {
         grid-template-columns: 1fr;
+    }
+
+    .center-photo {
+        width: 100%;
+        max-width: 100%;
+        justify-self: center;
+    }
+
+    .content img {
+        width: 100%; 
+        height: auto; 
+        max-width: 100%; 
     }
 }
