@@ -28,6 +28,7 @@ let project = {
 }
 
 function Kodify() {
+    
     return (
         <div className="project-container">
             {/* Title and overview */}

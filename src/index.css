@@ -2,9 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
+/* html {
+  cursor: none;
+} */
+
+/* #circularcursor {
+  background-color: transparent;
+  border:1px solid black;    
+  height:20px;
+  width:20px;
+  border-radius:50%;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+  position: absolute;
+  z-index: 1;
+} */
+
+/* 
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  transition-property: background, border, transform;
+  transform-origin: 150% 150%;
+  z-index: 9999;
+} */
+
 body {
-  background: #f8e4ec;
+  background: #fcfcf4;
+  font-family: 'Work Sans', sans-serif;
+  /* font-family: 'Work Sans', sans-serif; */
+  color: #403434;
 }
+
+@font-face {
+  font-family: 'Sporting Grotesque';
+  src: url('fonts/sporting-grotesque/SportingGrotesque-Regular.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* @font-face {
+  font-family: 'iA Writer Mono';
+  src: url('/fonts/iAWriterMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+/* 
+@font-face {
+  font-family: 'iA Writer Mono';
+  src: url('/fonts/iAWriterMono-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'iA Writer Mono';
+  src: url('/fonts/iAWriterMono-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'iA Writer Mono';
+  src: url('/fonts/iAWriterMono-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+} */
+
 /* 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
